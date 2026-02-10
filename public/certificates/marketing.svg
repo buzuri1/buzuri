@@ -1,0 +1,21 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#050505"/>
+  <defs>
+    <linearGradient id="chart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00FFFF"/>
+      <stop offset="1" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Chart Motif -->
+  <path d="M200 400 L 600 400" stroke="#333" stroke-width="2"/>
+  <path d="M200 400 L 200 200" stroke="#333" stroke-width="2"/>
+  
+  <path d="M250 380 L 350 300 L 450 340 L 550 200" stroke="#00FFFF" stroke-width="4" fill="none"/>
+  <path d="M250 380 L 350 300 L 450 340 L 550 200 V 400 H 250 Z" fill="url(#chart)" fill-opacity="0.2"/>
+  
+  <circle cx="550" cy="200" r="6" fill="#00FFFF"/>
+
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF" letter-spacing="4">MKT</text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="light" fill="#00FFFF" letter-spacing="2">STRATEGY</text>
+</svg>
