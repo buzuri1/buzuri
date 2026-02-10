@@ -2,9 +2,7 @@ import React, { useMemo } from 'react';
 
 const SnowParticles: React.FC = () => {
     const particles = useMemo(() => {
-        // Fewer particles on mobile for better performance
-        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-        const count = isMobile ? 15 : 30;
+        const count = 50; // Increased count for better visibility on all devices
 
         return Array.from({ length: count }, (_, i) => ({
             id: i,
@@ -17,7 +15,7 @@ const SnowParticles: React.FC = () => {
     }, []);
 
     return (
-        <div className="fixed inset-0 pointer-events-none z-[1]" aria-hidden="true">
+        <div className="fixed inset-0 pointer-events-none z-[50]" aria-hidden="true">
             {particles.map((p) => (
                 <div
                     key={p.id}

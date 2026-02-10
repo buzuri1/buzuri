@@ -111,10 +111,6 @@ const Certificates = () => {
                                         src={cert.img}
                                         alt={cert.title}
                                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-10"
-                                        onError={(e) => {
-                                            // Hide image if fails to load, showing fallback underneath
-                                            e.currentTarget.style.display = 'none';
-                                        }}
                                     />
 
                                     {/* Overlay */}
