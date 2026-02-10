@@ -33,19 +33,6 @@ const Projects: React.FC = () => {
         },
     ];
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.15 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-    };
-
     return (
         <section id="projects" className="py-16 sm:py-24 relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,8 +40,8 @@ const Projects: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.4 }}
                     className="text-center mb-10 sm:mb-16"
                 >
                     <p className="text-electric-blue text-sm font-medium tracking-[0.3em] uppercase mb-3">
@@ -65,47 +52,38 @@ const Projects: React.FC = () => {
                     </h2>
                 </motion.div>
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: '-50px' }}
-                    variants={containerVariants}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     {projects.map((project, index) => (
-                        <motion.a
+                        <a
                             key={index}
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            variants={itemVariants}
-                            whileHover={{ y: -8 }}
-                            transition={{ type: 'spring', stiffness: 300 }}
                             className="glass-card p-5 sm:p-6 block group cursor-pointer"
                         >
                             {/* Project number */}
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-electric-blue/30 font-display text-4xl sm:text-5xl group-hover:text-electric-blue/60 transition-colors duration-300">
+                                <span className="text-electric-blue/30 font-display text-4xl sm:text-5xl group-hover:text-electric-blue/60 transition-colors duration-200">
                                     {String(index + 1).padStart(2, '0')}
                                 </span>
-                                <span className="text-xs font-medium px-3 py-1 rounded-full bg-electric-blue/10 text-electric-blue border border-electric-blue/20">
+                                <span className="text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-1 rounded-full bg-electric-blue/10 text-electric-blue border border-electric-blue/20">
                                     {project.niche}
                                 </span>
                             </div>
 
-                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 group-hover:text-electric-blue transition-colors duration-200">
                                 {project.title}
                             </h3>
 
-                            <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+                            <p className="text-gray-400 mb-4 sm:mb-6 text-sm leading-relaxed">
                                 {project.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-2 mb-6">
+                            <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                                 {project.tags.map((tag) => (
                                     <span
                                         key={tag}
-                                        className="text-xs font-medium px-3 py-1 rounded-full bg-white/5 text-electric-blue/80 border border-electric-blue/10"
+                                        className="text-[10px] sm:text-xs font-medium px-2 sm:px-3 py-1 rounded-full bg-white/5 text-electric-blue/80 border border-electric-blue/10"
                                     >
                                         {tag}
                                     </span>
@@ -113,13 +91,13 @@ const Projects: React.FC = () => {
                             </div>
 
                             {/* Link */}
-                            <div className="text-gray-600 group-hover:text-electric-blue transition-all duration-300 flex items-center gap-2 text-sm font-medium">
+                            <div className="text-gray-600 group-hover:text-electric-blue transition-colors duration-200 flex items-center gap-2 text-sm font-medium">
                                 Visit Site
-                                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
                             </div>
-                        </motion.a>
+                        </a>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

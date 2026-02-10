@@ -2,13 +2,17 @@ import React, { useMemo } from 'react';
 
 const SnowParticles: React.FC = () => {
     const particles = useMemo(() => {
-        return Array.from({ length: 50 }, (_, i) => ({
+        // Fewer particles on mobile for better performance
+        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+        const count = isMobile ? 15 : 30;
+
+        return Array.from({ length: count }, (_, i) => ({
             id: i,
             left: Math.random() * 100,
-            size: Math.random() * 3 + 1,
-            duration: Math.random() * 10 + 8,
+            size: Math.random() * 2 + 1,
+            duration: Math.random() * 12 + 10,
             delay: Math.random() * 10,
-            opacity: Math.random() * 0.5 + 0.2,
+            opacity: Math.random() * 0.4 + 0.1,
         }));
     }, []);
 

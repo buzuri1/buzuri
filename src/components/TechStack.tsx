@@ -78,19 +78,6 @@ const TechStack: React.FC = () => {
         },
     ];
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.15 }
-        }
-    };
-
-    const categoryVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-    };
-
     return (
         <section id="tech-stack" className="py-16 sm:py-24 relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,8 +85,8 @@ const TechStack: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.4 }}
                     className="text-center mb-10 sm:mb-16"
                 >
                     <p className="text-electric-blue text-sm font-medium tracking-[0.3em] uppercase mb-3">
@@ -110,39 +97,31 @@ const TechStack: React.FC = () => {
                     </h2>
                 </motion.div>
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: '-50px' }}
-                    variants={containerVariants}
-                    className="space-y-8 sm:space-y-12"
-                >
+                <div className="space-y-8 sm:space-y-12">
                     {categories.map((category) => (
-                        <motion.div key={category.title} variants={categoryVariants}>
-                            <h3 className="text-lg font-semibold text-gray-400 mb-6 flex items-center gap-3">
+                        <div key={category.title}>
+                            <h3 className="text-lg font-semibold text-gray-400 mb-4 sm:mb-6 flex items-center gap-3">
                                 <span className="w-8 h-[2px] bg-electric-blue/50" />
                                 {category.title}
                             </h3>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3">
                                 {category.techs.map((tech) => (
-                                    <motion.div
+                                    <div
                                         key={tech.name}
-                                        whileHover={{ y: -6, scale: 1.02 }}
-                                        transition={{ type: 'spring', stiffness: 300 }}
-                                        className="glass-card p-4 flex flex-col items-center justify-center gap-3 cursor-default group"
+                                        className="glass-card p-3 sm:p-4 flex flex-col items-center justify-center gap-2 sm:gap-3 cursor-default group"
                                     >
-                                        <div className="text-3xl text-gray-500 group-hover:text-electric-blue transition-colors duration-300">
+                                        <div className="text-2xl sm:text-3xl text-gray-500 group-hover:text-electric-blue transition-colors duration-200">
                                             {tech.icon}
                                         </div>
-                                        <span className="text-xs text-gray-400 font-medium group-hover:text-white transition-colors duration-300 text-center">
+                                        <span className="text-[10px] sm:text-xs text-gray-400 font-medium group-hover:text-white transition-colors duration-200 text-center leading-tight">
                                             {tech.name}
                                         </span>
-                                    </motion.div>
+                                    </div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -11,12 +11,12 @@ const Contact: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="mb-16"
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.4 }}
+                    className="mb-12 sm:mb-16"
                 >
-                    <div className="min-h-[60px] sm:h-20 flex items-center justify-center">
-                        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+                    <div className="min-h-[50px] sm:min-h-[60px] flex items-center justify-center">
+                        <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white">
                             Empowering Somali youth with{' '}
                             <span className="text-electric-blue glow-text font-brand">
                                 <TypeAnimation
@@ -37,12 +37,7 @@ const Contact: React.FC = () => {
                 </motion.div>
 
                 {/* Contact Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                >
+                <div>
                     <p className="text-electric-blue text-sm font-medium tracking-[0.3em] uppercase mb-3">
                         Let's connect
                     </p>
@@ -52,47 +47,41 @@ const Contact: React.FC = () => {
                     <p className="text-gray-400 mb-8 sm:mb-12 text-base sm:text-lg max-w-lg mx-auto">
                         I'm currently open to new opportunities and collaborations.
                     </p>
-                </motion.div>
+                </div>
 
                 {/* Contact Cards */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex flex-col sm:flex-row justify-center items-center gap-6"
-                >
+                <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 sm:gap-6">
                     <a
                         href="mailto:hanasho.tech@gmail.com"
-                        className="glass-card p-6 sm:p-8 flex flex-col items-center group w-full sm:w-auto sm:min-w-[280px]"
+                        className="glass-card p-5 sm:p-8 flex flex-col items-center group flex-1 sm:max-w-[280px]"
                     >
-                        <div className="w-14 h-14 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4 group-hover:bg-electric-blue/20 group-hover:shadow-[0_0_20px_rgba(0,255,255,0.2)] transition-all duration-300">
-                            <FaEnvelope className="text-xl text-electric-blue" />
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-electric-blue/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-electric-blue/20 transition-colors duration-200">
+                            <FaEnvelope className="text-lg sm:text-xl text-electric-blue" />
                         </div>
-                        <span className="text-white font-medium mb-1">Email</span>
-                        <span className="text-gray-400 text-sm group-hover:text-electric-blue transition-colors duration-300">
+                        <span className="text-white font-medium mb-1 text-sm sm:text-base">Email</span>
+                        <span className="text-gray-400 text-xs sm:text-sm group-hover:text-electric-blue transition-colors duration-200">
                             hanasho.tech@gmail.com
                         </span>
                     </a>
 
                     <a
                         href="tel:+252612850007"
-                        className="glass-card p-6 sm:p-8 flex flex-col items-center group w-full sm:w-auto sm:min-w-[280px]"
+                        className="glass-card p-5 sm:p-8 flex flex-col items-center group flex-1 sm:max-w-[280px]"
                     >
-                        <div className="w-14 h-14 rounded-full bg-electric-blue/10 flex items-center justify-center mb-4 group-hover:bg-electric-blue/20 group-hover:shadow-[0_0_20px_rgba(0,255,255,0.2)] transition-all duration-300">
-                            <FaPhone className="text-xl text-electric-blue" />
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-electric-blue/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-electric-blue/20 transition-colors duration-200">
+                            <FaPhone className="text-lg sm:text-xl text-electric-blue" />
                         </div>
-                        <span className="text-white font-medium mb-1">Phone</span>
-                        <span className="text-gray-400 text-sm group-hover:text-electric-blue transition-colors duration-300">
+                        <span className="text-white font-medium mb-1 text-sm sm:text-base">Phone</span>
+                        <span className="text-gray-400 text-xs sm:text-sm group-hover:text-electric-blue transition-colors duration-200">
                             +252 612 850 007
                         </span>
                     </a>
-                </motion.div>
+                </div>
             </div>
 
             {/* Footer */}
             <footer className="mt-16 sm:mt-24 text-center border-t border-white/5 pt-6 sm:pt-8 pb-4 mx-4">
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-xs sm:text-sm">
                     &copy; {new Date().getFullYear()}{' '}
                     <span className="font-brand text-electric-blue/60">buzuri</span>
                     <span className="text-gray-700">.dev</span>
