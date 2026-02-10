@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
+aimport { motion } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
 import { FaAward } from 'react-icons/fa';
 
 // Placeholder certificates data
 // NOTE: Make sure to verify image paths. If you put images in 'public/certificates/', these paths will work.
-import genai from '../assets/certificates/genai.svg';
-import hr from '../assets/certificates/hr.svg';
-import rwd from '../assets/certificates/rwd.svg';
-import marketing from '../assets/certificates/marketing.svg';
-import flutter from '../assets/certificates/flutter.svg';
+import genai from '../assets/certificates/genai.png';
+import hr from '../assets/certificates/hr.png';
+import rwd from '../assets/certificates/rwd.png';
+import marketing from '../assets/certificates/marketing.png';
+import flutter from '../assets/certificates/flutter.png';
 
 const certificates = [
     {

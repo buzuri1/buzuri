@@ -1,0 +1,26 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="600" fill="#050505"/>
+  <defs>
+    <linearGradient id="glow" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00FFFF" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00FFFF" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#glow)"/>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Circuit/AI Brain Motif -->
+  <path d="M400 200 C 300 200, 250 300, 250 400" stroke="#00FFFF" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+  <path d="M400 200 C 500 200, 550 300, 550 400" stroke="#00FFFF" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+  <path d="M400 150 L 400 250" stroke="#00FFFF" stroke-width="2" stroke-opacity="0.5"/>
+  <circle cx="400" cy="200" r="40" stroke="#00FFFF" stroke-width="3" fill="rgba(0, 255, 255, 0.1)"/>
+  <circle cx="250" cy="400" r="10" fill="#00FFFF"/>
+  <circle cx="550" cy="400" r="10" fill="#00FFFF"/>
+  <circle cx="400" cy="300" r="5" fill="#00FFFF" fill-opacity="0.5"/>
+  
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="48" font-weight="bold" fill="#FFFFFF" letter-spacing="4">AI GEN</text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="light" fill="#00FFFF" letter-spacing="2">PROMPT ENGINEERING</text>
+</svg>
