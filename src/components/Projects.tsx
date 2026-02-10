@@ -47,7 +47,7 @@ const Projects: React.FC = () => {
     };
 
     return (
-        <section id="projects" className="py-24 relative">
+        <section id="projects" className="py-16 sm:py-24 relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section header */}
                 <motion.div
@@ -55,12 +55,12 @@ const Projects: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-10 sm:mb-16"
                 >
                     <p className="text-electric-blue text-sm font-medium tracking-[0.3em] uppercase mb-3">
                         My work
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                         Featured <span className="font-brand text-electric-blue glow-text">Projects</span>
                     </h2>
                 </motion.div>
@@ -81,11 +81,11 @@ const Projects: React.FC = () => {
                             variants={itemVariants}
                             whileHover={{ y: -8 }}
                             transition={{ type: 'spring', stiffness: 300 }}
-                            className="glass-card p-6 block group cursor-pointer"
+                            className="glass-card p-5 sm:p-6 block group cursor-pointer"
                         >
                             {/* Project number */}
                             <div className="flex items-center justify-between mb-4">
-                                <span className="text-electric-blue/30 font-display text-5xl group-hover:text-electric-blue/60 transition-colors duration-300">
+                                <span className="text-electric-blue/30 font-display text-4xl sm:text-5xl group-hover:text-electric-blue/60 transition-colors duration-300">
                                     {String(index + 1).padStart(2, '0')}
                                 </span>
                                 <span className="text-xs font-medium px-3 py-1 rounded-full bg-electric-blue/10 text-electric-blue border border-electric-blue/20">
@@ -93,7 +93,7 @@ const Projects: React.FC = () => {
                                 </span>
                             </div>
 
-                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">
+                            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-electric-blue transition-colors duration-300">
                                 {project.title}
                             </h3>
 

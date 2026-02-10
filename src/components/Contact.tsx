@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Contact: React.FC = () => {
     return (
-        <section id="contact" className="py-24 relative">
+        <section id="contact" className="py-16 sm:py-24 relative">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 {/* Animated Slogan */}
                 <motion.div
@@ -15,8 +15,8 @@ const Contact: React.FC = () => {
                     transition={{ duration: 0.6 }}
                     className="mb-16"
                 >
-                    <div className="h-20 flex items-center justify-center">
-                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">
+                    <div className="min-h-[60px] sm:h-20 flex items-center justify-center">
+                        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white">
                             Empowering Somali youth with{' '}
                             <span className="text-electric-blue glow-text font-brand">
                                 <TypeAnimation
@@ -46,10 +46,10 @@ const Contact: React.FC = () => {
                     <p className="text-electric-blue text-sm font-medium tracking-[0.3em] uppercase mb-3">
                         Let's connect
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
                         Get In <span className="font-brand text-electric-blue glow-text">Touch</span>
                     </h2>
-                    <p className="text-gray-400 mb-12 text-lg max-w-lg mx-auto">
+                    <p className="text-gray-400 mb-8 sm:mb-12 text-base sm:text-lg max-w-lg mx-auto">
                         I'm currently open to new opportunities and collaborations.
                     </p>
                 </motion.div>
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Footer */}
-            <footer className="mt-24 text-center border-t border-white/5 pt-8 pb-4">
+            <footer className="mt-16 sm:mt-24 text-center border-t border-white/5 pt-6 sm:pt-8 pb-4 mx-4">
                 <p className="text-gray-600 text-sm">
                     &copy; {new Date().getFullYear()}{' '}
                     <span className="font-brand text-electric-blue/60">buzuri</span>
