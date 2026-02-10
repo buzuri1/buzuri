@@ -4,41 +4,47 @@ import { FaAward } from 'react-icons/fa';
 
 // Placeholder certificates data
 // NOTE: Make sure to verify image paths. If you put images in 'public/certificates/', these paths will work.
+import genai from '../assets/certificates/genai.svg';
+import hr from '../assets/certificates/hr.svg';
+import rwd from '../assets/certificates/rwd.svg';
+import marketing from '../assets/certificates/marketing.svg';
+import flutter from '../assets/certificates/flutter.svg';
+
 const certificates = [
     {
         id: 1,
         title: "Generative AI: Prompt Engineering Basics",
         issuer: "IBM",
         date: "Dec 2025",
-        img: "/certificates/genai.svg"
+        img: genai
     },
     {
         id: 2,
         title: "Preparing to Manage Human Resources",
         issuer: "University of Minnesota",
         date: "Dec 2025",
-        img: "/certificates/hr.svg"
+        img: hr
     },
     {
         id: 3,
         title: "Responsive Web Design",
         issuer: "freeCodeCamp",
         date: "July 2025",
-        img: "/certificates/rwd.svg"
+        img: rwd
     },
     {
         id: 4,
         title: "Fundamentals of Marketing Strategy",
         issuer: "University of London",
         date: "Dec 2025",
-        img: "/certificates/marketing.svg"
+        img: marketing
     },
     {
         id: 5,
         title: "Flutter and Dart Mobile Apps",
         issuer: "IBM",
         date: "Dec 2025",
-        img: "/certificates/flutter.svg"
+        img: flutter
     }
 ];
 
